@@ -21,7 +21,7 @@ editables 0.6
 $ .venv/bin/pytest -q
 ........................................................................ [ 96%]
 ...                                                                      [100%]
-75 passed in 0.13s
+75 passed in 0.14s
 
 $ .venv/bin/python -m compileall -q src tests scripts
 # exit 0, no output
