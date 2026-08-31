@@ -5,8 +5,8 @@
     "creators": ["Tool: manual-minimal-sbom"]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://example.invalid/spdx/pep508-matrix/0.1.0",
-  "name": "pep508-matrix-0.1.0",
+  "documentNamespace": "https://example.invalid/spdx/pep508-matrix/0.1.1",
+  "name": "pep508-matrix-0.1.1",
   "packages": [
     {
       "SPDXID": "SPDXRef-Package-pep508-matrix",
@@ -16,7 +16,7 @@
       "licenseDeclared": "Apache-2.0",
       "name": "pep508-matrix",
       "supplier": "Organization: pep508-matrix contributors",
-      "versionInfo": "0.1.0"
+      "versionInfo": "0.1.1"
     },
     {
       "SPDXID": "SPDXRef-Package-packaging",

@@ -20,3 +20,9 @@ jobs:
       - run: pytest
       - run: python scripts/verify_boundary.py
       - run: python -m compileall -q src tests scripts
+      - name: Manifest is reproducible on this platform
+        run: |
+          python scripts/generate_manifest.py
+          git diff --exit-code -- MANIFEST.sha256
+      - name: Build wheel and sdist
+        run: python -m build --no-isolation
