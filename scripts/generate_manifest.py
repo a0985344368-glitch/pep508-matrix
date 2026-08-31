@@ -21,11 +21,18 @@ def tracked_files() -> list[Path]:
     )
     paths = [ROOT / item.decode("utf-8") for item in result.stdout.split(b"\0") if item]
     return sorted(
-        path
-        for path in paths
-        if path != MANIFEST
-        and path.is_file()
-        and not any(part in SKIP_PARTS or part.endswith(".egg-info") for part in path.parts)
+        (
+            path
+            for path in paths
+            if path != MANIFEST
+            and path.is_file()
+            and not any(part in SKIP_PARTS or part.endswith(".egg-info") for part in path.parts)
+        ),
+        # Sort on the POSIX relative path rather than the Path objects. Path
+        # ordering is platform dependent: PureWindowsPath compares case
+        # insensitively while PurePosixPath does not, so the same tree produced
+        # a different line order on Windows than on Linux.
+        key=lambda path: path.relative_to(ROOT).as_posix(),
     )
 
 
