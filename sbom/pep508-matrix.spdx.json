@@ -1,0 +1,46 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2026-08-31T00:00:00Z",
+    "creators": ["Tool: manual-minimal-sbom"]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://example.invalid/spdx/pep508-matrix/0.1.0",
+  "name": "pep508-matrix-0.1.0",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-pep508-matrix",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "pep508-matrix",
+      "supplier": "Organization: pep508-matrix contributors",
+      "versionInfo": "0.1.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-packaging",
+      "downloadLocation": "https://pypi.org/project/packaging/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "packaging",
+      "versionInfo": ">=23"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-PyYAML",
+      "downloadLocation": "https://pypi.org/project/PyYAML/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "name": "PyYAML",
+      "versionInfo": ">=6"
+    }
+  ],
+  "relationships": [
+    {"relatedSpdxElement": "SPDXRef-Package-pep508-matrix", "relationshipType": "DESCRIBES", "spdxElementId": "SPDXRef-DOCUMENT"},
+    {"relatedSpdxElement": "SPDXRef-Package-packaging", "relationshipType": "DEPENDS_ON", "spdxElementId": "SPDXRef-Package-pep508-matrix"},
+    {"relatedSpdxElement": "SPDXRef-Package-PyYAML", "relationshipType": "DEPENDS_ON", "spdxElementId": "SPDXRef-Package-pep508-matrix"}
+  ],
+  "spdxVersion": "SPDX-2.3"
+}

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pep508-matrix"
+version = "0.1.0"
+description = "Offline observations of PEP 508 marker outcomes across literal CI matrices"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "pep508-matrix contributors"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = ["packaging>=23", "PyYAML>=6"]
+
+[project.optional-dependencies]
+dev = ["build>=1", "editables>=0.5", "hatchling>=1.26", "pytest>=8"]
+
+[project.scripts]
+pep508-matrix = "pep508_matrix.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pep508_matrix"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

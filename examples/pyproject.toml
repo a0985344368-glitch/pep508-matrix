@@ -1,0 +1,12 @@
+[project]
+name = "synthetic-marker-example"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = [
+  "colorama>=0.4; sys_platform == 'win32'",
+  "importlib-metadata; python_version < '3.12'",
+  "typing-extensions",
+]
+
+[project.optional-dependencies]
+speedups = ["synthetic-speedup; platform_python_implementation == 'CPython'"]
