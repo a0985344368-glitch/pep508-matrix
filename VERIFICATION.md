@@ -1,7 +1,7 @@
 # Verification record
 
-Verified at `2026-08-31T10:06:27Z` (UTC) with Python `3.12.13` in the
-project-local `.venv`.
+Verified at `2026-08-31T10:06:27Z` (UTC), using Python `3.12.13` in the
+project-local `.venv` environment.
 
 ## Environment
 
