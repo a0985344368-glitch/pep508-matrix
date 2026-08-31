@@ -27,6 +27,9 @@ pep508-matrix = "pep508_matrix.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/pep508_matrix"]
 
+[tool.hatch.build]
+exclude = ["/MANIFEST.sha256", "/VERIFICATION.md"]
+
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]

@@ -1,4 +1,4 @@
-"""Deterministic report renderers."""
+"""Render stable, deterministic text and JSON reports."""
 
 from __future__ import annotations
 

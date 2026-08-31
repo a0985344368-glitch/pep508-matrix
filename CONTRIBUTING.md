@@ -12,3 +12,4 @@ Contributions are welcome through a standard fork-and-review workflow.
 Please avoid fixtures copied from private repositories or user projects. Do not
 add network access or workflow execution to the `check` command. Reports should
 remain neutral observations, not claims about a project's intended support.
+Prefer small changes with a regression test that demonstrates the exact edge.
